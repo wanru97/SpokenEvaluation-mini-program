@@ -4,7 +4,7 @@ import { judgeToken, getToken } from '../utils/permission'
 /**
  * 服务器根路径
  */
-export const BASE_URL = ''
+export const BASE_URL = 'https://www.fastmock.site/mock/85b938cb0c354a6830c0e78af6427dc4/Spoken'
 
 /**
  * 各种请求Get,post,delete,put方法
@@ -32,6 +32,9 @@ export function Delete (apiUrl, param, header) {
 const TipInfoMenu = {
   '/test': {
     204 : '提示语'
+  },
+  '/login': {
+    204 : '提示语'
   }
 }
 const ErrInfoMenu = {
@@ -48,15 +51,14 @@ function HttpStatusCodeTip(res,apiUrl) {
   if ( res.statusCode < 400) {
     wx.showToast({
       title: res.data.message || TipInfoMenu[apiUrl][res.statusCode],
-      icon: 'success',
       duration: 2000
     })
   } else {
-    consoe.err(`statusCode：${res.statusCode}`)
+    console.err(`statusCode：${res.statusCode}`)
     if (res.statusCode === 401) {
       // 无权限要进行特殊处理
     } else {
-      consoe.err(`${ErrInfoMenu[res.statusCode]}`)
+      console.err(`${ErrInfoMenu[res.statusCode]}`)
     }
     
   }
