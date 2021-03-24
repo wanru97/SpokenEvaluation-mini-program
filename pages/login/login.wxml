@@ -1,2 +1,4 @@
 <!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<navigationBar title="标题"></navigationBar>
+<view class="content_page" style="height:calc(100% - {{titleHeight+statusBarHeight}}px)">
+</view>

@@ -1,0 +1,12 @@
+<!--components/navigationBar/navigationBar.wxml-->
+<view class="navigationBar">
+  <view style="height: {{ statusBarHeight }};"></view>
+  <view class="navBarTitle" style="height: {{ titleHeight }};">
+    <view wx:if="{{ iconType === 'return' }}" class="navBarLeft" bindtap="clickReturn">
+    <i-icon class="icon" type="return" size="30"/>
+    </view>
+    <view class="titleInfo">
+    {{ title }}
+    </view>
+  </view>
+</view>

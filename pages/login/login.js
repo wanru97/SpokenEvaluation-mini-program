@@ -1,18 +1,23 @@
 // pages/login/login.js
+const app = getApp()
+import { getNavBarHeight } from '../../utils/common'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    titleHeight: getNavBarHeight(),
+    statusBarHeight: app.globalData.navBarInfo.statusBarHeight
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const app = getApp()
+    console.info(app)
   },
 
   /**

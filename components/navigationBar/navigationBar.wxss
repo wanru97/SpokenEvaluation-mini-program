@@ -1,0 +1,24 @@
+/* components/navigationBar/navigationBar.wxss */
+.navigationBar {
+  background-color: #405FFF;
+  /* height: 68px; */
+}
+.navBarTitle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+.navBarLeft {
+  position: absolute;
+  top: 50%;
+  left: 20rpx;
+  transform: translate(0, -50%);
+}
+.icon {
+  font-weight: bold;
+  color: #ffffff;
+}

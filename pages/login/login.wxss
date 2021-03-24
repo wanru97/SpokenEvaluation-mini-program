@@ -1,1 +1,11 @@
 /* pages/login/login.wxss */
+.navigationBar {
+  /* 控制导航栏组件样式 */
+}
+.loginPage {
+  background: chocolate;
+}
+.content_page {
+  background: chocolate;
+  height: 100%;
+}
