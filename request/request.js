@@ -1,4 +1,4 @@
-import { judgeToken, getToken } from '../utils/permission'
+import { judgeToken, getToken } from '../utils/token'
 
 
 /**
@@ -99,7 +99,7 @@ export function request (method, apiUrl, param, header) {
       header: headerValue,
       data: param || {},
       success (res) {
-        HttpStatusCodeTip(res, apiUrl)
+        // HttpStatusCodeTip(res, apiUrl)
         response = res.data
         if (res.statusCode < 400) {
           resolve(res)
@@ -108,7 +108,7 @@ export function request (method, apiUrl, param, header) {
         }
       },
       fail (err) {
-        HttpStatusCodeTip(err, apiUrl)
+        // HttpStatusCodeTip(err, apiUrl)
         error = err
         reject(err)
       },
