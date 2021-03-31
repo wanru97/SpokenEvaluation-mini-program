@@ -102,7 +102,7 @@ export function request (method, apiUrl, param, header) {
         // HttpStatusCodeTip(res, apiUrl)
         response = res.data
         if (res.statusCode < 400) {
-          resolve(res)
+          resolve(response || res)
         } else {
           reject(res)
         }
@@ -115,12 +115,12 @@ export function request (method, apiUrl, param, header) {
       complete () {
         // 为了在控制台显示每次的请求数据，方便调试
         console.info('==============>发送请求<==============')
-        console.warn(`请求方法: ${ method },请求数据: ${ BASE_URL }${ apiUrl }`)
-        if (param) console.warn('参数：', param)
+        console.info(`请求方法: ${ method },请求数据: ${ BASE_URL }${ apiUrl }`)
+        if (param) console.info('参数：', param)
         if (response) {
-          console.warn('请求成功：', response)
+          console.info('请求成功：', response)
         } else {
-          console.warn('请求失败：', error)
+          console.info('请求失败：', error)
         }
         console.info('==============>请求结束<==============')
       }

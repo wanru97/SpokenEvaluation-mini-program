@@ -1,4 +1,21 @@
 <!--pages/login/login.wxml-->
-<navigationBar title="标题"></navigationBar>
+<navigationBar title="登录"></navigationBar>
 <view class="content_page" style="height:calc(100% - {{titleHeight+statusBarHeight}}px)">
+  <view class="inputPart">
+    <view class="row">
+      <view>账号:</view>
+      <view>
+        <input class="username" type="text" bindinput="inputUsername" placeholder="请输入账号"/>
+      </view>
+    </view>
+    <view class="row">
+      <view>密码:</view>
+      <view>
+        <input class="username" password type="text" bindinput="inputPassword" placeholder="请输入密码"/>
+      </view>
+    </view>
+  </view>
+  <view class="buttonPart">
+    <button type="default" bindtap="Login">登录</button>
+  </view>
 </view>

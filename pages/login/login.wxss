@@ -2,10 +2,35 @@
 .navigationBar {
   /* 控制导航栏组件样式 */
 }
-.loginPage {
-  background: chocolate;
-}
 .content_page {
-  background: chocolate;
   height: 100%;
+}
+.inputPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50rpx;
+}
+.inputPart .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+.inputPart .row view:nth-child(1) {
+  margin-right:30rpx;
+}
+.inputPart input {
+  border: 2rpx solid #cccccc;
+  padding: 10rpx 20rpx;
+  width: 300rpx;
+}
+.buttonPart {
+  width: 100%;
+}
+.buttonPart button[type='default'] {
+  width: 80%;
+  background-color:cornflowerblue;
+  color: #ffffff;
 }
